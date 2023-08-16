@@ -1,6 +1,10 @@
 // Import hook useForm
 import { useForm } from "../../hooks/useForm";
 
+// Animation
+import { motion as m } from "framer-motion";
+import { transition1 } from "../../transitions";
+
 const initialFrom = {
   name: "",
   lastname: "",
@@ -33,7 +37,13 @@ const Contact = () => {
     useForm(initialFrom, validationsFrom);
 
   return (
-    <main className="mt-20 lg:py-12 xl:mt-36 flex flex-col lg:flex-row justify-between bg-contact-image bg-center bg-cover ">
+    <m.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={transition1}
+      className="mt-20 lg:py-12 xl:mt-36 flex flex-col lg:flex-row justify-between bg-contact-image bg-center bg-cover "
+    >
       <section className="w-full p-5 md:p-10 flex justify-center items-center">
         <ul className="grid gap-5 md:gap-10 lg:h-full md:text-3xl lg:text-2xl text-white items-center">
           <li>
@@ -74,7 +84,7 @@ const Contact = () => {
 
       <section className="w-full p-5 lg:p-10">
         <form
-          className="grid gap-5 font-bold text-lg lg:text-2xl "
+          className="grid gap-5 font-bold text-lg lg:text-2xl text-primary-green"
           ref={ref}
           onSubmit={handleSubmit}
         >
@@ -122,7 +132,7 @@ const Contact = () => {
           {success && "Your correo ya ha sido enviado, muchas gracias"}
         </div>
       </section>
-    </main>
+    </m.main>
   );
 };
 

@@ -1,9 +1,16 @@
+// Animation
+import { easeOut, motion as m } from "framer-motion";
+
 // Import Icons
 import { BsWhatsapp } from "react-icons/bs";
 
 const Whatsapp = () => {
   return (
-    <section className="fixed z-20 bottom-8 right-8 lg:bottom-20 lg:right-20">
+    <m.section
+      whileHover={{ scale: 1.2 }}
+      transition={{ easeOut, duration: 0.3 }}
+      className="fixed z-20 bottom-8 right-8 lg:bottom-20 lg:right-20"
+    >
       <a
         target="_blank"
         rel="noreferrer"
@@ -13,7 +20,7 @@ const Whatsapp = () => {
           <BsWhatsapp className="text-3xl lg:text-4xl" color="white" />
         </div>
       </a>
-    </section>
+    </m.section>
   );
 };
 

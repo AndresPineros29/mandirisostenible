@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
+
 import { useState } from "react";
 import { logotipo } from "../../assets/images";
 import Services from "./Services";
 import ServicesSm from "./ServicesSm";
+
+// Animation
+import { easeOut, motion as m } from "framer-motion";
 
 // Import icons
 
@@ -39,48 +43,60 @@ const Navbar = ({ handleClickScroll }) => {
         <div className="hidden lg:flex items-center">
           <ul className="flex gap-10 text-lg font-[500]">
             <Link to={"/"}>
-              <li
+              <m.li
+                whileHover={{ scale: 1.1 }}
+                transition={{ easeOut, duration: 0.3 }}
                 className="select-none cursor-pointer hover:text-primary-green"
                 onClick={scrollToTop}
               >
                 INICIO
-              </li>
+              </m.li>
             </Link>
             <div
               onMouseEnter={() => setActive(true)}
               onMouseLeave={() => setActive(false)}
             >
-              <li
+              <m.li
+                whileHover={{ scale: 1.1 }}
+                transition={{ easeOut, duration: 0.3 }}
                 className="select-none cursor-pointer hover:text-primary-green"
                 onClick={handleClickScroll}
               >
                 SERVICIOS
-              </li>
+              </m.li>
               <Services active={active} setActive={setActive} />
             </div>
             <Link to={"/contacto"}>
-              <li className="select-none cursor-pointer hover:text-primary-green">
+              <m.li
+                whileHover={{ scale: 1.1 }}
+                transition={{ easeOut, duration: 0.3 }}
+                className="select-none cursor-pointer hover:text-primary-green"
+              >
                 CONTACTO
-              </li>
+              </m.li>
             </Link>
           </ul>
         </div>
 
         <div className="hidden lg:flex gap-5 text-primary-green">
-          <a
+          <m.a
+            whileHover={{ scale: 1.1 }}
+            transition={{ easeOut, duration: 0.3 }}
             target="_blank"
             rel="noreferrer"
             href="https://www.instagram.com/mandirisostenible/"
           >
             <BsInstagram size={30} />
-          </a>
-          <a
+          </m.a>
+          <m.a
+            whileHover={{ scale: 1.1 }}
+            transition={{ easeOut, duration: 0.3 }}
             target="_blank"
             rel="noreferrer"
             href="https://www.facebook.com/profile.php?id=100094486896691"
           >
             <BsFacebook size={30} />
-          </a>
+          </m.a>
         </div>
 
         <div className="z-30 lg:hidden" onClick={() => setActive(!active)}>
