@@ -1,0 +1,10 @@
+export { default as Home } from "./Home/Home.jsx";
+export { default as Contact } from "./Contact/Contact.jsx";
+export { default as EstudiosAmbientales } from "./Services/EstudiosAmbientales.jsx";
+export { default as SaneamientoBasico } from "./Services/SaneamientoBasico.jsx";
+export { default as Ecoturismo } from "./Services/Ecoturismo.jsx";
+export { default as Hidrico } from "./Services/Hidrico.jsx";
+export { default as Forestal } from "./Services/Forestal.jsx";
+export { default as EnergiasRenobables } from "./Services/EnergiasRenobables.jsx";
+export { default as Atmosferico } from "./Services/Atmosferico.jsx";
+export { default as Biodiversidad } from "./Services/Biodiversidad.jsx";
