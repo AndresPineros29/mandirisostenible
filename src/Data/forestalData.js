@@ -1,3 +1,5 @@
+import { paisajismo } from "../assets/images";
+
 export const forestalData = {
   name: "Forestal",
   description:
@@ -15,7 +17,7 @@ export const forestalData = {
     },
     {
       line: "Paisajismo",
-      image: "../../public/paisajismo.jpg",
+      image: paisajismo,
     },
     {
       line: "Restauración de Ecosistemas",

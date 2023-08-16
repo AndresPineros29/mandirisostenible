@@ -1,50 +1,61 @@
+import {
+  Saneamiento,
+  estudiosAm,
+  Ecoturismo,
+  Biodiversidad,
+  Energias,
+  Forestal,
+  Hidrico,
+  atmosferico,
+} from "../assets/icons/icons";
+
 export const servicesData = [
   {
     service: "Estudios Ambientales",
     ruta: "estudios_ambientales",
-    icon: "../../public/estudiosAm.png",
+    icon: estudiosAm,
     color: 1,
   },
   {
     service: "Saneamiento Basico",
     ruta: "saneamiento_basico",
-    icon: "../../public/Saneamiento.png",
+    icon: Saneamiento,
     color: 0,
   },
   {
     service: "Ecoturismo",
     ruta: "ecoturismo",
-    icon: "../../public/Ecoturismo.png",
+    icon: Ecoturismo,
     color: 1,
   },
   {
     service: "Hidrico",
     ruta: "hidrico",
-    icon: "../../public/Hidrico.png",
+    icon: Hidrico,
     color: 0,
   },
   {
     service: "Forestal",
     ruta: "forestal",
-    icon: "../../public/Forestal.png",
+    icon: Forestal,
     color: 1,
   },
   {
     service: "Energias Renobables",
     ruta: "energias_renobables",
-    icon: "../../public/Energias.png",
+    icon: Energias,
     color: 0,
   },
   {
     service: "Atmosferico",
     ruta: "atmosferico",
-    icon: "../../public/Atmosferico.png",
+    icon: atmosferico,
     color: 1,
   },
   {
     service: "Biodiversidad",
     ruta: "biodiversidad",
-    icon: "../../public/Biodiversidad.png",
+    icon: Biodiversidad,
     color: 0,
   },
 ];

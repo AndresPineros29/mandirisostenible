@@ -1,3 +1,5 @@
+import { aves, espeleismo, senderismo } from "../assets/images";
+
 export const ecoturismoData = {
   name: "Ecoturismo",
   description:
@@ -5,7 +7,7 @@ export const ecoturismoData = {
   lines: [
     {
       line: "Senderismo",
-      image: "../../public/senderismo.jpg",
+      image: senderismo,
     },
     {
       line: "Salidas Pedagógpicas",
@@ -14,7 +16,7 @@ export const ecoturismoData = {
     },
     {
       line: "Avistamiento de Avez",
-      image: "../../public/aves.jpg",
+      image: aves,
     },
     {
       line: "Talleres Ambientales",
@@ -28,7 +30,7 @@ export const ecoturismoData = {
     },
     {
       line: "Espeleísmo",
-      image: "../../public/espeleismo.jpg",
+      image: espeleismo,
     },
     {
       line: "Aero Turismo",
